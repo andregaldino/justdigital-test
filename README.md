@@ -10,4 +10,10 @@ O teste deve ser efetuado no arquivo src/Prova.php
 
 Os métodos e variáveis não devem ser alterados, apenas escreva a solução usando os parâmetros já existentes.
 
+# Instruções
 
+Instalação :
+`composer install`
+
+Rodar os testes :
+`composer test`
