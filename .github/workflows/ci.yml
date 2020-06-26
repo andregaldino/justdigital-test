@@ -1,0 +1,19 @@
+name: Test
+on: [push]
+jobs:
+  phpunit:
+    runs-on: ubuntu-latest
+    container:
+      image: mattiasgeniar/php73
+
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+
+    - name: Install composer dependencies
+      run: |
+        composer install --prefer-dist --no-scripts -q -o;
+    
+    - name: Run Testsuite
+      run: composer test
